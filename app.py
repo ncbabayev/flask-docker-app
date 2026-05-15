@@ -1,0 +1,19 @@
+from flask import Flask
+app=Flask(__name__)
+
+@app.route("/")
+
+
+def home():
+    return "Hello! My first Flask app is running in Docker!"
+
+
+@app.route("/about")
+def about():
+    return "This app was built by Nicat Babayev!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
+
+
